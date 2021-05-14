@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "f0014f6f-3662-4b97-8d43-1a74c5de3b2d",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Agents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/agents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"agents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": 5054,\r\n    \"agent_id\": 101,\r\n    \"guid\": \"54fc8606-0630-42f9-9e3c-716772df09bf\",\r\n    \"isActive\": true,\r\n    \"balance\": \"$1,578.40\",\r\n    \"age\": 57,\r\n    \"eyeColor\": \"blue\",\r\n    \"name\": {\r\n        \"first\": \"Neva\",\r\n        \"last\": \"Calderon\"\r\n    },\r\n    \"company\": \"ISOTRONICZZ\",\r\n    \"email\": \"neva.calderon@isotronic.info\",\r\n    \"phone\": \"+1 (985) 502-2956\",\r\n    \"address\": \"573 Turner Place, Yukon, Federated States Of Micronesia, 762\",\r\n    \"registered\": \"Wednesday, January 31, 2018 12:40 PM\",\r\n    \"latitude\": \"76.989498\",\r\n    \"longitude\": \"26.410977\",\r\n    \"tags\": [\r\n        \"eiusmod\",\r\n        \"reprehenderit\",\r\n        \"labore\",\r\n        \"ut\",\r\n        \"dolor\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/customers/8203",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"customers",
+						"8203"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get agent by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/agents/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"agents",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add an Agent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Hello Howdy\",\r\n        \"address\": \"123 Main Street #200\",\r\n        \"city\": \"Houston\",\r\n        \"state\": \"TX\",\r\n        \"zipCode\": \"77041\",\r\n        \"tier\": 2,\r\n        \"phone\":{\r\n            \"primary\": \"123-123-1234\",\r\n            \"mobile\": \"713-555-3211\"\r\n        }\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/agents/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"agents",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Agent by property",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Howdy Hello\",\r\n    \"zipCode\": \"77041\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/agents/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"agents",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find customers by agent ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/customers/321",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"customers",
+						"321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update customer by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": 8203,\r\n    \"agent_id\": 467,\r\n    \"guid\": \"60e09079-3b7b-434a-9030-5f7f98eda232\",\r\n    \"isActive\": true,\r\n    \"balance\": \"$2,634.30\",\r\n    \"age\": 100,\r\n    \"eyeColor\": \"brown\",\r\n    \"name\": {\r\n        \"first\": \"Pope\",\r\n        \"last\": \"Jones\"\r\n    },\r\n    \"company\": \"GEEKOLOGY\",\r\n    \"email\": \"pope.wheeler@geekology.co.uk\",\r\n    \"phone\": \"+1 (910) 453-2823\",\r\n    \"address\": \"825 Cropsey Avenue, Homeworth, Puerto Rico, 7683\",\r\n    \"registered\": \"Thursday, January 16, 2014 2:49 AM\",\r\n    \"latitude\": \"59.528935\",\r\n    \"longitude\": \"52.987053\",\r\n    \"tags\": [\r\n        \"cillum\",\r\n        \"voluptate\",\r\n        \"duis\",\r\n        \"mollit\",\r\n        \"ea\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/customers/8203",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"customers",
+						"8203"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
